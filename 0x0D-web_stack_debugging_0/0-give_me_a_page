@@ -1,0 +1,30 @@
+# Step 1: Start the container with bash shell
+docker run -p 8080:80 -d -it --name=my_container holbertonschool/265-0 /bin/bash
+
+# Step 2: Enter the container
+docker exec -it my_container /bin/bash
+
+# Step 3: Check Apache status
+service apache2 status
+
+# Step 4: If Apache is not running, start it
+service apache2 start
+
+# Step 5: Check Apache configuration
+cat /etc/apache2/sites-available/000-default.conf
+
+# Step 6: Ensure that the DocumentRoot is set correctly and pointing to the directory containing the content
+# If not, edit the configuration file to set it correctly
+# Example: DocumentRoot /var/www/html
+
+# Step 7: Check if the correct content file exists
+ls /var/www/html
+
+# Step 8: If the file containing "Hello Holberton" is not present, create it
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Step 9: Exit the container shell
+exit
+
+# Step 10: Restart the container
+docker restart my_container
