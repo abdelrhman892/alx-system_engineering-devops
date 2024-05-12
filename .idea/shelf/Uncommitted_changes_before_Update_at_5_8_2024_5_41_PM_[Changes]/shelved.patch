@@ -1,0 +1,26 @@
+Index: 0x16-api_advanced/0-subs.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/usr/bin/python3\r\n\"\"\"\r\nScript that queries subscribers on a given Reddit subreddit.\r\n\"\"\"\r\n\r\nimport requests\r\n\r\n\r\ndef number_of_subscribers(subreddit):\r\n    \"\"\"Return the total number of subscribers on a given subreddit.\"\"\"\r\n    url = \"https://www.reddit.com/r/askreddit/about.json\".format(subreddit)\r\n    headers = {\"User-Agent\": \"Mozilla/5.0\"}\r\n    response = requests.get(url, headers=headers, allow_redirects=False)\r\n    if response.status_code == 200:\r\n        data = response.json()\r\n        subscribers = data['data']['subscribers']\r\n        return subscribers\r\n    else:\r\n        return 0\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/0x16-api_advanced/0-subs.py b/0x16-api_advanced/0-subs.py
+--- a/0x16-api_advanced/0-subs.py	(revision 23e20f821a7a257c43bb8c50897a052adb004eea)
++++ b/0x16-api_advanced/0-subs.py	(date 1715179267199)
+@@ -1,14 +1,9 @@
+-#!/usr/bin/python3
+-"""
+-Script that queries subscribers on a given Reddit subreddit.
+-"""
+-
+ import requests
+ 
+ 
+ def number_of_subscribers(subreddit):
+     """Return the total number of subscribers on a given subreddit."""
+-    url = "https://www.reddit.com/r/askreddit/about.json".format(subreddit)
++    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+     headers = {"User-Agent": "Mozilla/5.0"}
+     response = requests.get(url, headers=headers, allow_redirects=False)
+     if response.status_code == 200:
