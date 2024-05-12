@@ -1,3 +1,5 @@
+![Image](https://github.com/abdelrhman892/alx-system_engineering-devops/blob/master/0x19-postmortem/1_bSUlrrO7E83Eb85sAIiZrw.png)
+
 # Postmortem: Web Stack Debugging Project Outage
 
 **Issue Summary:**
