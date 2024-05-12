@@ -1,4 +1,5 @@
- <h1>Postmortem: Web Stack Debugging Project Outage</h1>
+<body>
+    <h1>Postmortem: Web Stack Debugging Project Outage</h1>
 
     <h2>Issue Summary:</h2>
     <ul>
@@ -40,3 +41,4 @@
 
     <h2>Conclusion:</h2>
     <p>The outage was a valuable learning experience, highlighting the importance of thorough monitoring, rapid detection, and collaborative troubleshooting in maintaining the reliability and performance of web applications. By implementing the corrective measures outlined above, we aim to minimize the risk of similar incidents in the future and ensure a seamless user experience.</p>
+</body>
